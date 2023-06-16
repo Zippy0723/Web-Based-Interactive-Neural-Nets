@@ -147,7 +147,9 @@ pub async fn run() {
     let mut weight_line_1 = CpuMesh::cylinder(8);
     weight_line_1.transform(&Mat4::from_nonuniform_scale(4.0,  0.1, 0.1));
     
-    weight_line_1.transform(&Mat4::from_translation(Vec3::new(-3.0, 2.0, 0.0))).unwrap();
+    weight_line_1.transform(&Mat4::from_translation(Vec3::new(-3.0, 3.0, 0.0))).unwrap();
+    weight_line_1.transform(&Mat4::from_angle_z(radians(2.7)));
+    weight_line_1.transform(&Mat4::from_translation(Vec3::new(0.0, 4.0, 0.0))).unwrap();
 
     let mut weight_line_1_mesh = Gm::new(
         Mesh::new(&context, &weight_line_1),
